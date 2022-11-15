@@ -20,10 +20,11 @@ double Vehicle::getBatteryLevel() const {
 double Vehicle::getEfficiency() const {
 	return m_efficiency;
 }
+
 double Vehicle::getCurrentSpeed() {
 	return m_current_speed;
 }
+
 double Vehicle::getWattage() {
 	return m_wattage;
 }
-

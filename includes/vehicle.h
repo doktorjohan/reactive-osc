@@ -33,6 +33,8 @@ private:
 	double m_vehicle_mass;
 	double m_friction_constant;
 	const double m_gravity_constant = 9.79;
+	double m_current_torque;
+	double m_current_rpm;
 
 	// all below defined in vehiclePhysics.cpp
 	double m_calculateTotalWattage(double road_angle, double acceleration,
@@ -46,11 +48,13 @@ private:
 
 	double m_calculateWattageForRoadProfile(double road_angle);
 
-	double m_calculateEfficiencyPoint();
+	double m_calculateCurrentSpeed();
 
 	double m_calculateWindSpeed(double relative_angle, double wind_speed_mps);
 
 	double m_calculateLowerLimitSpeed(double distanceInKM, double timeInHours);
+
+	double m_calculateNecessaryTorque(double rpm);
 
 };
 
